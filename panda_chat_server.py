@@ -50,7 +50,7 @@ class PandaChatServer:
         self.clients = {}  # {client_socket: panda_name}
         self.client_threads = []  # Keep track of client threads
         self.running = True
-        self.lock = threading.Lock()  # Add lock for thread-safe operations
+        self.lock = threading.RLock()
         self.setup_signal_handlers()
         
     def setup_signal_handlers(self):
