@@ -251,6 +251,7 @@ class PandaChatServer:
             # Welcome message
             try:
                 welcome_msg = f"Welcome to the Panda Chat, {panda_name}! 🐼\n" \
+                            f"{PANDA_ASCII}\n" \
                             f"Special commands:\n" \
                             f"@bamboo - Get a random panda fact\n" \
                             f"@grove - See who's in the chat\n" \
