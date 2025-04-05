@@ -123,28 +123,21 @@ class CatChatGUIClient:
     def receive_messages(self):
         while self.running:
             try:
-                # Receive data and add to buffer
                 chunk = self.client_socket.recv(BUFFER_SIZE)
                 if not chunk:
-                    # Connection closed by server
                     self.insert_message("😿 Server closed the connection")
                     break
                 
-                # Add the new chunk to our buffer
                 self.message_buffer += chunk
                 
-                # Process as many complete messages as possible
                 while True:
                     try:
-                        # Try to decode the current buffer
                         message = self.message_buffer.decode(FORMAT)
-                        # If successful, clear buffer and process message
                         self.message_buffer = b''
                         if message:
                             self.insert_message(message)
                         break
                     except UnicodeDecodeError as e:
-                        # If we get a specific error about unexpected end of data
                         if "unexpected end of data" in str(e):
                             # We need more data, break this inner loop and wait for next chunk
                             break

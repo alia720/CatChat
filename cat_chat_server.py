@@ -7,13 +7,11 @@ import sys
 import select
 from datetime import datetime
 
-# Server Configuration
 HOST = '127.0.0.1'
 PORT = 5555
 BUFFER_SIZE = 1024
 FORMAT = 'utf-8'
 
-# Cat elements
 CAT_EMOJIS = ["🐱", "🐾", "🥛", "🎣", "🧶"]
 CAT_FACTS = [
     "Cats sleep 12-16 hours a day on average!",
