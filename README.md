@@ -38,21 +38,3 @@ Cat Chat is a playful, feline-themed chat application divided into two component
    ```bash
    python cat_chat_client.py
    ```
-
-## Challenges Faced
-- **UTF-8 Message Handling**: Ensuring proper encoding/decoding of messages, especially with emojis and when messages split across network packets.
-- **Concurrency Management**: Coordinating multiple client connections while maintaining thread safety for shared resources.
-- **UI/UX Design**: Creating a visually appealing, cat-themed interface that maintains usability and charm.
-- **Network Resilience**: Implementing robust error handling for network disconnections and transmission issues.
-
-## Extra Features
-- **Cat Name Selection**: Users can choose their own cat name when joining the chat.
-- **Message Buffering**: Advanced handling of incomplete UTF-8 sequences for reliable communication.
-- **Responsive Design**: The chat interface adapts to window resizing for a better user experience.
-- **Visual Feedback**: Clear visual indications when messages are sent and received.
-
-## Future Enhancements
-- **Direct Messages**: Allow cats to send private whispers to each other.
-- **File Sharing**: Implement the ability to share images and files with other cats.
-- **Custom Avatars**: Allow users to select or upload cat avatars.
-- **Chat Rooms**: Support for multiple chat rooms or "cat colonies".
