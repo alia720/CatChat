@@ -1,5 +1,9 @@
 # Cat Chat Application
 
+<p align="center">
+  <img src="./CatChat.gif" alt="Cat Chat Animation" width="300px" />
+</p>
+
 ## Overview
 Cat Chat is a playful, feline-themed chat application divided into two components:
 
